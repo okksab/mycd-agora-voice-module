@@ -7,11 +7,19 @@
 	"compatibility_date": "2025-10-08",
 	"main": "./workers/app.ts",
 	"vars": {
-		"VALUE_FROM_CLOUDFLARE": "Hello from Hono/CF"
+		"VALUE_FROM_CLOUDFLARE": "Hello from Hono/CF",
+		"CORE_API_URL": "https://test-api.mycalldriver.com"
 	},
 	"observability": {
 		"enabled": true
 	},
+	// "kv_namespaces": [
+	// 	{
+	// 		"binding": "VOICE_KV",
+	// 		"id": "your-kv-namespace-id",
+	// 		"preview_id": "your-preview-kv-namespace-id"
+	// 	}
+	// ],
 	/**
 	 * Smart Placement
 	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
@@ -42,5 +50,12 @@
 	 * https://developers.cloudflare.com/workers/wrangler/configuration/#service-bindings
 	 */
 	// "services": [{ "binding": "MY_SERVICE", "service": "my-service" }]
-	"upload_source_maps": true
+	"upload_source_maps": true,
+	"kv_namespaces": [
+		{
+			"binding": "VOICE_KV",
+			"id": "2362ba2f6e384d55be150aef3aac2e3f",
+			"preview_id": "1bda7e571c67411c83b048e77d47fba3"
+		}
+	]
 }
